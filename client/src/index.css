@@ -1,1 +1,18 @@
 .card-img, .card-img-bottom, .card-img-top {width: 200px}
+.social-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-between;
+    padding: 2px;
+
+}
+.card{
+    width: 22rem;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border: 8px solid #b909c9;
+    
+}
