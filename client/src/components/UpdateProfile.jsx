@@ -13,6 +13,21 @@ import TikTok from "./Socials/TikTok";
 import Reddit from "./Socials/Reddit";
 
 export const SingleProfile = (props) => {
+    const [profileData, setProfileData] = useState({
+        email: props.profile.email, 
+        personalWebsite: props.profile.personalWebsite,
+        linkedin: props.profile.linkedin,
+        facebook: props.profile.facebook,
+        instagram: props.profile.instagram,
+        tiktok: props.profile.tiktok,
+        reddit: props.profile.reddit,
+    })
+    const handleInputChange = event => {
+        setProfileData({
+            ...profileData,
+          [event.target.name]: event.target.value
+        });
+      };
     
   return (
     <div>
@@ -24,26 +39,18 @@ export const SingleProfile = (props) => {
           src="https://via.placeholder.com/150"
           sx={{ width: 200, height: 200 }}
         />
-        <div className="d-grid gap-2">
-        <Button variant="primary" size="sm">
-        Edit Profile
-      </Button>
-      <Button variant="secondary" size="sm">
-        Edit User
-      </Button>
-      <Button variant="danger" size="sm">
-        Delete User
-      </Button>
-      </div>
         <Card.Body>
-            <div className="expanded-profile-body">
-                <Email /> <Typography variant="body1">www.personalsite.com</Typography>
-                <Personal /> <Typography variant="body1">www.personalsite.com</Typography>
-                <Linkedin /> <Typography variant="body1">www.personalsite.com</Typography>
-                <Facebook /> <Typography variant="body1">www.personalsite.com</Typography>
-                <Instagram /> <Typography variant="body1">www.personalsite.com</Typography>
-                <TikTok /> <Typography variant="body1">www.personalsite.com</Typography>
-                <Reddit /> <Typography variant="body1">www.personalsite.com</Typography>
+                <div className="expanded-profile-body">
+                    <label>
+                        <Email />:
+                        <input
+                        type="text"
+                        name="name"
+                        value={this.state.email}
+                        onChange={this.handleInputChange}
+                        />
+                    </label>
+                
                 </div>
         </Card.Body>
       </Card>

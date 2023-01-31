@@ -16,3 +16,15 @@
     border: 8px solid #b909c9;
     
 }
+
+.expandedProfile {
+    width: 35rem;
+}
+
+.expanded-profile-body {
+    display: grid;
+}
+
+.avatar {
+    margin: 20px
+}

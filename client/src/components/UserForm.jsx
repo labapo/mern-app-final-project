@@ -15,18 +15,18 @@ export const UserForm = ({ currentId, setCurrentId }) => {
     //prevents refreshing the page
     e.preventDefault();
     createUser(userData);
-    // clear();
+    clear();
   };
-  //   const clear = () => {
-  //     setCurrentId(null);
-  //     //set data to an empty string
-  //     setUserData({
-  //     firstName: "",
-  //     lastName: "",
-  //     email: "",
-  //     profileImage: null
-  //     })
-  //   }
+    const clear = () => {
+      //setCurrentId(null);
+      //set data to an empty string
+      setUserData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      profileImage: null
+      })
+    }
   //   const fileSelectorHandler = event => {
   //     console.log(event);
   //     setUserData({...userData, email: event.target.value});

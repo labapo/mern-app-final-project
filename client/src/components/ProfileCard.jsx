@@ -3,6 +3,8 @@ import { Nav, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { SocialBar } from "./SocialBar";
 
+
+
 export const ProfileCard = () => {
   return (
     <div>
