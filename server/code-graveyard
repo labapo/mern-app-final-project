@@ -25,3 +25,20 @@ function Bell(props) {
 
 export default Bell
 <Bell />
+
+ const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([])
+  useEffect(() => {
+    const fetchData = async () =>{
+      setLoading(true);
+      try {
+        const {data: response} = await axios.get('/stuff/to/fetch');
+        setData(response);
+      } catch (error) {
+        console.error(error.message);
+      }
+      setLoading(false);
+    }
+
+    fetchData();
+  }, []);

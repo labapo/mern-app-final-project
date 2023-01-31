@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { SocialBar } from "./SocialBar";
+// import { SocialBar } from "./SocialBar";
 import Avatar from '@mui/material/Avatar'
-import Personal from "./Socials/Personal";
-import { Typography } from "@mui/material";
+// import Personal from "./Socials/Personal";
+// import { Typography } from "@mui/material";
 import Email from "./Socials/Email";
-import Linkedin from "./Socials/Linkedin";
-import Facebook from "./Socials/Facebook";
-import Instagram from "./Socials/Instagram";
-import TikTok from "./Socials/TikTok";
-import Reddit from "./Socials/Reddit";
+// import Linkedin from "./Socials/Linkedin";
+// import Facebook from "./Socials/Facebook";
+// import Instagram from "./Socials/Instagram";
+// import TikTok from "./Socials/TikTok";
+// import Reddit from "./Socials/Reddit";
 
 export const SingleProfile = (props) => {
     const [profileData, setProfileData] = useState({

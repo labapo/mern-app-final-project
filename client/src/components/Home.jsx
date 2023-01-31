@@ -1,21 +1,24 @@
+import axios from "axios";
 import React, {useState, useEffect} from "react";
 import Container from 'react-bootstrap/Container';
 import { ProfileCard } from "./ProfileCard";
 
-export const Home = (setCurrentId) => {
-  const [totalProfile, setTotalProfile] = useState();
-  const [profile, setProfileData] = useState();
-  console.log(profile)
-  if (totalProfile === 0) {
-     return ""
-  }
+export const Home = () => {
+  const [profiles, setProfiles] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:8000/profiles").then((response) =>{
+      setProfiles(response.data)
+    }).catch(error => console.log(error)); 
+ },[])
   return (
     <Container>
-      {profile?.map((profile) => (
-        <div key={profile._id}>
-          <ProfileCard {...setCurrentId} post={ProfileCard}/>
-        </div>
-      ))}
+      {profiles.map((profiles, i)=> {
+        return (
+          <div key={profiles.id}>
+            <a href={`/profiles/${profiles.id}`}>{profiles.linkedin}</a>
+          </div>
+        );
+      })}
     </Container>
   )
 }
