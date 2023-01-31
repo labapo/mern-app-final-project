@@ -17,6 +17,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  profile
 });
 const User = mongoose.model("user", UserSchema);
 export default User;

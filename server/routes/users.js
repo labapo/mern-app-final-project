@@ -9,9 +9,9 @@ router.get("/users", getUsers);
 router.post("/users", createUser);
 
 //update user
-router.patch('/:id', updateUser)
+// router.patch('/:id', updateUser)
 
-//delete user
-router.delete('/:id', deleteUser)
+// //delete user
+// router.delete('/:id', deleteUser)
 
 export default router;

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, InputGroup, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createUser } from "../api/index";
+import { ProfileForm } from "./ProfileForm";
 // import FileBase from 'react-file-base64'
 
 export const UserForm = ({ currentId, setCurrentId }) => {
@@ -11,12 +12,13 @@ export const UserForm = ({ currentId, setCurrentId }) => {
     email: "",
     profileImage: null,
   });
-  const handleSubmit = (e) => {
+  const [localUser,setLocalUser]=useState(null)
+  const handleSubmit = async (e) => {
     //prevents refreshing the page
     e.preventDefault();
-    createUser(userData);
+    await setLocalUser(createUser(userData));
     clear();
-  };
+  }; console.log(localUser)
     const clear = () => {
       //setCurrentId(null);
       //set data to an empty string
@@ -27,6 +29,10 @@ export const UserForm = ({ currentId, setCurrentId }) => {
       profileImage: null
       })
     }
+    const [showComponent, setShowComponent] = useState(false);
+    const handleClickComponent = () => {
+    setShowComponent(true);
+  }
   //   const fileSelectorHandler = event => {
   //     console.log(event);
   //     setUserData({...userData, email: event.target.value});
@@ -90,10 +96,12 @@ export const UserForm = ({ currentId, setCurrentId }) => {
                 onDone={({base64}) => setUserData({ ...userData, selectedFile: base64})}
                 /> */}
         </InputGroup>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" onClick={handleClickComponent}>
           Submit
         </Button>
-      </Form>
+        </Form>
+        {showComponent && <ProfileForm />}
+      
     </>
   );
 };

@@ -1,24 +1,21 @@
-import { ProfileCard } from "./components/ProfileCard";
-import { ProfileForm } from "./components/ProfileForm";
-import { UserForm } from "./components/UserForm";
+// import { ProfileCard } from "./components/ProfileCard";
+// import { ProfileForm } from "./components/ProfileForm";
 import { Welcome } from "./components/Welcome";
-import { Home } from "./components/Home"
-import { SingleProfile } from "./components/SingleProfile";
-import { LoadUsers } from "./components/LoadUsers";
+import { Home } from "./components/Home";
+// import { SingleProfile } from "./components/SingleProfile";
+// import { LoadUsers } from "./components/LoadUsers";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <LoadUsers />
-      <h1>Hello, bitches</h1>
-      <Welcome />
-      <Home />
-      <UserForm />
-      <h1>Social Media</h1>
-      <ProfileForm />
-      <ProfileCard />
-      <SingleProfile />
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Welcome />} />
+          <Route exact path="/home" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

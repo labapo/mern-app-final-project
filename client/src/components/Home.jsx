@@ -19,6 +19,7 @@ export const Home = () => {
           </div>
         );
       })}
+      <ProfileCard />
     </Container>
   )
 }

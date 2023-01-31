@@ -18,15 +18,15 @@ export const createProfile = (profile) => async (dispatch) => {
     }
 }
 
-export const updateProfile = (id, profile) => async (dispatch) => {
-    try {
-        // returning updated memory or the post
-        const {data} = await api.editProfile(id, profile);
-        dispatch({type: "UPDATE", payload: data});
-    } catch (error) {
-        console.log(error.message)
-    }
-}
+// export const updateProfile = (id, profile) => async (dispatch) => {
+//     try {
+//         // returning updated memory or the post
+//         const {data} = await api.updateProfile(id, profile);
+//         dispatch({type: "UPDATE", payload: data});
+//     } catch (error) {
+//         console.log(error.message)
+//     }
+// }
 
 export const deleteProfile = (id) => async dispatch => {
     try {

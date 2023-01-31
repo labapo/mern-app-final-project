@@ -20,6 +20,8 @@ app.use(cors());
 app.use("/", userRouter);
 app.use('/', profileRouter);
 
+//middleware to connect 
+
 //-------------------------CONNECTIONS---------------------------//
 const CONNECTION_URL =
   "mongodb+srv://labapo:Missy217!@sei.xkd1rlx.mongodb.net/?retryWrites=true&w=majority";
