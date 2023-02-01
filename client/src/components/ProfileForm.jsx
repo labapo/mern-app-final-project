@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, InputGroup, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createProfile } from "../api/index";
-// import { useNavigate } from "react-router-dom"
+import { Redirect } from "react-router-dom"
 
 export const ProfileForm = ({user}) => {
   // console.log(user)
@@ -17,10 +17,11 @@ const [profileData, setProfileData] = useState({
     flickr: "",
     personalWebsite: "",
   });
-  // const navigate = useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await createProfile(profileData);
+    await createProfile(profileData).then(
+    window.location.replace("http://localhost:3000/home")
+    );
   };
   return (
     <Form onSubmit={handleSubmit}>
