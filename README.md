@@ -5,7 +5,7 @@ My application is called Social Contact. It's an app where users can put in all 
 Users will input the URLs for each social media platform, and when users view profiles, all they have to do is click on the button to get a hyperlink of their page. 
 
 Here is what I planned the main page to look like: 
-![Page Layout](./client/src/images/Page Layout.jpg)
+![Page Layout](client/src/images/Page Layout.jpg)
 
 Here is what I palnned the individual profiles to loo like. 
 
