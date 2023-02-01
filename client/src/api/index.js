@@ -1,8 +1,8 @@
 import axios from "axios";
 
 //backend data url
-const urlUser = "http://localhost:8000/users"; 
-const urlProfile = "http://localhost:8000/profiles"
+const urlUser = "https://social-contact-backend.onrender.com/users"; 
+const urlProfile = "https://social-contact-backend.onrender.com/profiles"
 
 //user routes
 export const getUser = (id) => axios.get(`${urlUser}/${id}`)
