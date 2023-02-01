@@ -16,7 +16,12 @@ export const UserForm = ({ currentId, setCurrentId }) => {
   const handleSubmit = async (e) => {
     //prevents refreshing the page
     e.preventDefault();
-    await setLocalUser(createUser(userData));
+    // await setLocalUser(createUser(userData));
+    let result = createUser(userData).then((response)=>{
+      setLocalUser(response.data)
+      setShowComponent(true)
+    })
+    
     clear();
   }; console.log(localUser)
     const clear = () => {
@@ -30,9 +35,9 @@ export const UserForm = ({ currentId, setCurrentId }) => {
       })
     }
     const [showComponent, setShowComponent] = useState(false);
-    const handleClickComponent = () => {
-    setShowComponent(true);
-  }
+  //   const handleClickComponent = () => {
+  //   setShowComponent(true);
+  // }
   //   const fileSelectorHandler = event => {
   //     console.log(event);
   //     setUserData({...userData, email: event.target.value});
@@ -96,11 +101,11 @@ export const UserForm = ({ currentId, setCurrentId }) => {
                 onDone={({base64}) => setUserData({ ...userData, selectedFile: base64})}
                 /> */}
         </InputGroup>
-        <Button variant="primary" type="submit" onClick={handleClickComponent}>
+        <Button variant="primary" type="submit" >
           Submit
         </Button>
         </Form>
-        {showComponent && <ProfileForm />}
+        {showComponent && <ProfileForm user={localUser}/>}
       
     </>
   );

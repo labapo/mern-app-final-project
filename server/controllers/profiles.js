@@ -1,6 +1,14 @@
 import mongoose from 'mongoose';
 import Profile from '../models/Profile.js'
 
+// export const getProfile = async (req, res) => {
+//     try {
+//         const userId=req.params.ObjectId
+//     } catch (error) {
+        
+//     }
+// }
+
 export const getProfiles = async (req, res) => {
     try {
         const profiles = await Profile.find({});
@@ -13,6 +21,7 @@ export const getProfiles = async (req, res) => {
 }
 
 export const createProfile = async (req, res) => {
+    //create function to get user by ID
     const profile = req.body;
     const newProfile = new Profile(profile);
     console.log(newProfile);

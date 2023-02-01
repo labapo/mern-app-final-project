@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Button, InputGroup, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createProfile } from "../api/index";
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 
-export const ProfileForm = ({users}) => {
+export const ProfileForm = ({user}) => {
+  // console.log(user)
 const [profileData, setProfileData] = useState({
-    // user: userData._id,
+    user: user?._id,
     linkedin: "",
     facebook: "",
     instagram: "",
@@ -16,10 +17,10 @@ const [profileData, setProfileData] = useState({
     flickr: "",
     personalWebsite: "",
   });
-  const navigate = useNavigate()
-  const handleSubmit = (e) => {
+  // const navigate = useNavigate()
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    createProfile(profileData);
+    await createProfile(profileData);
   };
   return (
     <Form onSubmit={handleSubmit}>
@@ -99,7 +100,7 @@ const [profileData, setProfileData] = useState({
             }}
         />
       </InputGroup>
-      <Button variant="primary" type="submit" onClick={() => navigate('/home')}>
+      <Button variant="primary" type="submit">
         Submit
       </Button>
     </Form>

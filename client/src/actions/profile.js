@@ -1,22 +1,22 @@
-import * as api from "../api";
+// import * as api from "../api";
 
-export const getProfiles = () => async (dispatch) => {
-    try {
-        const { data } = await api.getProfiles();
-        dispatch({ type: "FETCH_ALL", payload: data});
-    } catch (error) {
-        console.log(error)
-    }
-}
+// export const getProfiles = () => async (dispatch) => {
+//     try {
+//         const { data } = await api.getProfiles();
+//         dispatch({ type: "FETCH_ALL", payload: data});
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
-export const createProfile = (profile) => async (dispatch) => {
-    try {
-        const { data } = await api.createProfile(profile)
-        dispatch({ type: "CREATE", payload: data})
-    } catch (error) {
-        console.log(error);
-    }
-}
+// export const createProfile = (profile) => async (dispatch) => {
+//     try {
+//         const { data } = await api.createProfile(profile)
+//         dispatch({ type: "CREATE", payload: data})
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 // export const updateProfile = (id, profile) => async (dispatch) => {
 //     try {
@@ -28,11 +28,11 @@ export const createProfile = (profile) => async (dispatch) => {
 //     }
 // }
 
-export const deleteProfile = (id) => async dispatch => {
-    try {
-        await api.deleteProfile(id);
-        dispatch({ type: "DELETE", payload: id});
-    } catch (error) {
-        console.log(error);
-    }
-}
+// export const deleteProfile = (id) => async dispatch => {
+//     try {
+//         await api.deleteProfile(id);
+//         dispatch({ type: "DELETE", payload: id});
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
