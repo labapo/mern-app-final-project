@@ -6,7 +6,7 @@ Users will input the URLs for each social media platform, and when users view pr
 
 Here is what I planned the main page to look like: 
 
-![Page Layout](/client/src/images/Page Layout.jpg)
+![Page Layout](https://trello.com/1/cards/63cef304fc180e2a20ad04aa/attachments/63cef32026dfab0c11df7925/previews/63cef32126dfab0c11df79ec/download/Page_Layout.jpg)
 
 Here is what I palnned the individual profiles to loo like. 
 
