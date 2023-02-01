@@ -5,7 +5,7 @@
     flex-direction: row;
     align-content: space-around;
     justify-content: space-between;
-    padding: 2px;
+    padding: 1px;
 
 }
 .card{
@@ -14,7 +14,6 @@
     text-align: center;
     padding: 15px;
     border: 8px solid #b909c9;
-    
 }
 
 .expandedProfile {
@@ -27,4 +26,18 @@
 
 .avatar {
     margin: 20px
+}
+.profileCard {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    /* grid-template-columns: repeat(3, 200px); */
+    justify-content: space-around;
+    /* align-items: center;
+    justify-items: stretch;
+    align-content: space-evenly; */
+}
+.littleCard {
+    max-width: 30%;
 }

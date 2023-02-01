@@ -34,10 +34,12 @@ export const ProfileCard = () => {
     return profile;
   }
   return (
-    <div>
+    <>
       {users.map((user, i) => {
         const profile = findProfileById(user._id);
+        
         return (
+        
         <Card key={user._id}>
           <Card.Img variant="top" src="https://via.placeholder.com/150" />
           <Card.Body>
@@ -49,7 +51,8 @@ export const ProfileCard = () => {
             </Nav.Item>
           </Card.Body>
         </Card>)
+      
      })}
-    </div>
+    </>
   );
 };

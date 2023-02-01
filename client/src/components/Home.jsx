@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import { ProfileCard } from "./ProfileCard";
+import "../index.css";
+
 
 export const Home = () => {
   const [profiles, setProfiles] = useState([]);
@@ -14,15 +16,8 @@ export const Home = () => {
       .catch((error) => console.log(error));
   }, []);
   return (
-    <Container>
-      {profiles.map((profiles, i) => {
-        return (
-          <div key={i}>
-            <a href={`/profiles/${profiles.id}`}>{profiles.linkedin}</a>
-          </div>
-        );
-      })}
-      <ProfileCard />
+    <Container className="profileCard">
+      <ProfileCard className="littleCard" />
     </Container>
   );
 };
