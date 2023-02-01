@@ -1,13 +1,14 @@
 import React from "react";
 
-const Reddit = () => {
+const Reddit = ({reddit}) => {
   return (
     <div>
       <a
-        target="_blank"
+        // target="_blank"
+        // rel="noreferrer"
         className="btn btn-primary"
         style={{ backgroundColor: "#ff4500" }}
-        href="www.website.com"
+        href={reddit}
         type="button"
       >
         <svg

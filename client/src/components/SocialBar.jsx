@@ -8,17 +8,28 @@ import Reddit from "./Socials/Reddit";
 import TikTok from "./Socials/TikTok";
 import Twitter from "./Socials/Twitter";
 
-export const SocialBar = () => {
+export const SocialBar = ({ user, profile }) => {
+  const { firstName, lastName, email, profileImage } = user;
+  const {
+    linkedin,
+    facebook,
+    instagram,
+    twitter,
+    tiktok,
+    reddit,
+    personalWebsite,
+  } = profile;
+console.log(linkedin)
   return (
     <div className="social-buttons">
-      <Personal />
-      <Email />
-      <Linkedin />
-      <Facebook />
-      <Instagram />
-      <Twitter />
-      <TikTok />
-      <Reddit />
+      {profile?.personalWebsite !== "" && <Personal personalWebsite={personalWebsite} />}
+      {user?.email !== "" &&<Email email={email}/>}
+      {profile?.linkedin !== "" &&<Linkedin linkedin={linkedin}/>}
+      {profile?.facebook !== "" && <Facebook facebook={facebook}/>}
+      {profile?.instagram !== "" &&<Instagram instagram={instagram}/>}
+      {profile?.twitter !== "" &&<Twitter twitter={twitter} />}
+      {profile?.tiktok !== "" &&<TikTok tiktok={tiktok}/>}
+      {profile?.reddit !== "" &&<Reddit reddit={reddit}/>}
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { Button } from "react-bootstrap";
-import { ProfileForm } from "./ProfileForm";
 import { UserForm} from './UserForm'
 
 export const Welcome = () => {
@@ -10,7 +9,7 @@ export const Welcome = () => {
   }
   const [hideButton, setHideButton] = useState(true)
   const hiddenButton = () => {
-    setShowComponent(false)
+    setHideButton(false)
   }
   return (
     <div>

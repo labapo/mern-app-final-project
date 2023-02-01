@@ -1,13 +1,14 @@
 import React from "react";
 
-const Instagram = () => {
+const Instagram = ({instagram}) => {
   return (
     <div>
       <a
-        target="_blank"
+        // target="_blank"
+        // rel="noreferrer"
         className="btn btn-primary"
         style={{ backgroundColor: "#ac2bac" }}
-        href="www.website.com"
+        href={instagram}
         type="button"
       >
         <svg

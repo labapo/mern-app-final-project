@@ -1,13 +1,14 @@
 import React from "react";
 
-const Twitter = () => {
+const Twitter = (twitter) => {
   return (
     <div>
       <a
         target="_blank"
+        rel="noreferrer"
         className="btn btn-primary"
         style={{ backgroundColor: "#55acee" }}
-        href="www.website.com"
+        href={Twitter}
         type="button"
       >
         <svg

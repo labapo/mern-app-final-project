@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, InputGroup, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createProfile } from "../api/index";
-import { Redirect } from "react-router-dom"
 
 export const ProfileForm = ({user}) => {
   // console.log(user)

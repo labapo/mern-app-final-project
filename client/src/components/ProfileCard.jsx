@@ -3,6 +3,7 @@ import { Nav, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { SocialBar } from "./SocialBar";
 import axios from "axios";
+import Email from "./Socials/Email";
 
 export const ProfileCard = () => {
   const [profiles, setProfiles] = useState([]);
@@ -14,7 +15,7 @@ export const ProfileCard = () => {
       })
       .catch((error) => console.log(error));
   }, []);
-console.log(profiles)
+  // console.log(profiles);
 
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -25,22 +26,30 @@ console.log(profiles)
       })
       .catch((error) => console.log(error));
   }, []);
-  console.log(users)
+  const profile = {linkedin: "google.com"}
+  console.log("users", users)
+  console.log(profiles)
+  const findProfileById = (id) => {
+    const profile = profiles.find(p => p.user==id)
+    return profile;
+  }
   return (
-  
     <div>
-      {users.map((user) => 
-        <Card>
-        <Card.Img variant="top" src="https://via.placeholder.com/150" />
-        <Card.Body>
-          <Card.Title>{user.firstName}</Card.Title>
-          <Nav.Item>
-            <SocialBar />
-          </Nav.Item>
-        </Card.Body>
-      </Card>
-      )}
-      
+      {users.map((user, i) => {
+        const profile = findProfileById(user._id);
+        return (
+        <Card key={user._id}>
+          <Card.Img variant="top" src="https://via.placeholder.com/150" />
+          <Card.Body>
+            <Card.Title>
+              {user.firstName} {user.lastName}
+            </Card.Title>
+            <Nav.Item>
+              <SocialBar user={user} profile={profile}/>
+            </Nav.Item>
+          </Card.Body>
+        </Card>)
+     })}
     </div>
   );
 };

@@ -4,7 +4,8 @@ const Personal = () => {
   return (
     <div>
       <a
-        target="_blank"
+        // target="_blank"
+        // rel="noreferrer"
         className="btn btn-primary"
         style={{ backgroundColor: "#96d665" }}
         href="www.website.com"

@@ -24,7 +24,7 @@ export const createProfile = async (req, res) => {
     //create function to get user by ID
     const profile = req.body;
     const newProfile = new Profile(profile);
-    console.log(newProfile);
+    // console.log(newProfile);
     try {
         await newProfile.save();
         res.status(201).json(newProfile);

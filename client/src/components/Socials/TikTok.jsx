@@ -1,13 +1,14 @@
 import React from "react";
 
-const TikTok = () => {
+const TikTok = ({tiktok}) => {
   return (
     <div>
       <a
         target="_blank"
+        rel="noreferrer"
         className="btn btn-primary"
         style={{ backgroundColor: "#c4cbcf" }}
-        href="www.website.com"
+        href={tiktok}
         type="button"
       >
         <svg

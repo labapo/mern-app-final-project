@@ -1,13 +1,15 @@
 import React from "react";
 
-const Linkedin = () => {
+const Linkedin = ({linkedin}) => {
+  // console.log(linkedin)
   return (
     <div>
       <a
         target="_blank"
+        rel="noreferrer"
         className="btn btn-primary"
         style={{ backgroundColor: "#0082ca" }}
-        href="www.website.com"
+        href={linkedin}
         type="button"
       >
         <svg

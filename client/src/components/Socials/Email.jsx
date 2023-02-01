@@ -1,13 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const Email = () => {
+//wrap use in an object
+const Email = ({email}) => {
+  // const [profiles, setProfiles] = useState([]);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8000/profiles")
+  //     .then((response) => {
+  //       setProfiles(response.data);
+  //     })
+  //     .catch((error) => console.log(error));
+  // }, []);
+  // // console.log(profiles);
+
+  // const [users, setUsers] = useState([]);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8000/users")
+  //     .then((response) => {
+  //       setUsers(response.data);
+  //     })
+  //     .catch((error) => console.log(error));
+  // }, []);
+
+  // const findProfilesByUserId = (userId, profiles) => {
+  //   return profiles.filter((profile) => profile.user === userId);
+  // };
+
+  // let userId = "63d9bfdd6a8a377fe41db1c0";
+  // console.log(userId)
+  // console.log(findProfilesByUserId(findProfilesByUserId(userId, profiles)));
   return (
     <div>
       <a
         target="_blank"
+        rel="noreferrer"
         className="btn btn-primary"
         style={{ backgroundColor: "#65d6be" }}
-        href="email.com"
+        href={`mailto:${email}`}
         type="button"
       >
         <i className="bi bi-envelope-heart-fill">

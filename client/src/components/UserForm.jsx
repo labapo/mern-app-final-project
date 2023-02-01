@@ -23,7 +23,8 @@ export const UserForm = ({ currentId, setCurrentId }) => {
     })
     
     clear();
-  }; console.log(localUser)
+  }; 
+  // console.log(localUser)
     const clear = () => {
       //setCurrentId(null);
       //set data to an empty string
