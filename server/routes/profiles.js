@@ -13,6 +13,6 @@ router.post("/profiles", createProfile);
 router.patch('/:id', updateProfile)
 
 //delete profile
-router.delete('/:id', deleteProfile)
+router.delete('/profiles/:id', deleteProfile)
 
 export default router;

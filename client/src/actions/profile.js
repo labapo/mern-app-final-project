@@ -1,4 +1,6 @@
-// import * as api from "../api";
+ import * as api from "../api";
+ import { useState } from 'react'
+import axios from "axios";
 
 // export const getProfiles = () => async (dispatch) => {
 //     try {
@@ -28,11 +30,13 @@
 //     }
 // }
 
-// export const deleteProfile = (id) => async dispatch => {
-//     try {
-//         await api.deleteProfile(id);
-//         dispatch({ type: "DELETE", payload: id});
-//     } catch (error) {
-//         console.log(error);
-//     }
+// export const deleteProfile = async (id) => {
+//    try {
+//     const response = await axios.delete(`/profiles/${id}`);
+//     console.log(response);
+//     setProfile(prevProfile => prevProfile.filter(profile => profile.id !== id));
+
+//    } catch (error) {
+//     console.log(error)
+//    }
 // }

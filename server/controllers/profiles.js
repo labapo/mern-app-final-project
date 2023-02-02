@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import Profile from '../models/Profile.js'
+import User from '../models/User.js';
 
 // export const getProfile = async (req, res) => {
 //     try {
@@ -55,8 +56,12 @@ export const updateProfile = async (req, res) => {
 
 export const deleteProfile = async (req, res) => {
     const { id } = req.params;
-    if(!mongoose.Types.ObjectId.isValid(id))
-    return res.status(404).send(`No Profile with id: ${id}`);
+    console.log("this is the deleteprofile controller in the server");
+    if(!mongoose.Types.ObjectId.isValid(id)){
+    return res.status(404).send(`No Profile with id: ${id}`);}
+    const profile = await Profile.findById(id);
+    console.log("delete profile controllers", profile)
     await Profile.findByIdAndRemove(id);
-    res.json({ message: 'Post deleted successfully.'})
+    await User.findByIdAndRemove(profile.user);
+    res.json({ message: 'profile deleted successfully.'})
 }

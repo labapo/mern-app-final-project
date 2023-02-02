@@ -9,7 +9,7 @@ import TikTok from "./Socials/TikTok";
 import Twitter from "./Socials/Twitter";
 
 export const SocialBar = ({ user, profile }) => {
-  const { firstName, lastName, email, profileImage } = user;
+  const { email } = user;
   const {
     linkedin,
     facebook,
@@ -19,7 +19,7 @@ export const SocialBar = ({ user, profile }) => {
     reddit,
     personalWebsite,
   } = profile;
-console.log(linkedin)
+// console.log(linkedin)
   return (
     <div className="social-buttons">
       {profile?.personalWebsite !== "" && <Personal personalWebsite={personalWebsite} />}

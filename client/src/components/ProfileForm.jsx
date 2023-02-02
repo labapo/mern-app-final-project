@@ -12,8 +12,6 @@ const [profileData, setProfileData] = useState({
     instagram: "",
     twitter: "",
     reddit: "",
-    soundCloud: "",
-    flickr: "",
     personalWebsite: "",
   });
   const handleSubmit = async (e) => {

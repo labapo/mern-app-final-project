@@ -4,8 +4,8 @@ const Instagram = ({instagram}) => {
   return (
     <div>
       <a
-        // target="_blank"
-        // rel="noreferrer"
+        target="_blank"
+        rel="noreferrer"
         className="btn btn-primary"
         style={{ backgroundColor: "#ac2bac" }}
         href={instagram}
