@@ -1,10 +1,10 @@
 import axios from "axios";
 
 //backend data url
-// const urlUser = "https://social-contact-backend.onrender.com/users"; 
-// const urlProfile = "https://social-contact-backend.onrender.com/profiles"
-const urlProfile = "http://localhost:8000/profiles"
-const urlUser = "http://localhost:8000/users"
+const urlUser = "https://social-contact-backend.onrender.com/users"; 
+const urlProfile = "https://social-contact-backend.onrender.com/profiles"
+// const urlProfile = "http://localhost:8000/profiles"
+// const urlUser = "http://localhost:8000/users"
 //user routes
 export const getUser = (id) => axios.get(`${urlUser}/${id}`)
 export const getUsers = () => axios.get(urlUser)
