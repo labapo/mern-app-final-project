@@ -17,7 +17,7 @@ const [profileData, setProfileData] = useState({
   const handleSubmit = async (e) => {
     e.preventDefault();
     await createProfile(profileData).then(
-    window.location.replace("https://social-contact.onrender.com/")
+    window.location.replace("https://social-contact.onrender.com/home")
     );
   };
   return (
