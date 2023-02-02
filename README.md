@@ -36,11 +36,13 @@ Deployed app url: https://social-contact.onrender.com/
 
 -------------------------------------------------
 Unsolved Problems: List any unsolved issues.
-- Still needs to make the delete update work
+- Still needs to make the update function work
+- Fix refresh after delete
+- Fix file import for profile images
 - Needs to fix styling
 - Needs to view individual expand of profile
 - Needs to make some buttons dissapear when some buttons are clicked
 
 Future Enhancements: Identify future features and enhancements planned for the project.
 - Add authorization 
-- Way to sort, filter, or find. 
+- Way to sort, filter, or find entries
